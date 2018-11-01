@@ -12,7 +12,7 @@ module Zinbeijett
   module_function
 
   def version
-    VERSION = '2.0.0'.toutf8.freeze
+    puts 'version is : '+'2.0.0'.toutf8.freeze
   end
 
   def start
