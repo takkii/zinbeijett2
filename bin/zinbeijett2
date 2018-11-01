@@ -38,7 +38,7 @@ module Zinbeijett
 
     match method : 1.x.x
     
-    GitHub       : 2.x.x
+    軽量化       : 2.x.x
 
     > Thank you for reading to the last.
     DOC
@@ -57,12 +57,13 @@ module Zinbeijett
 
     < how to use >
 
-    engine [ File name ] [ String or regular expression ]
+    engine -z [ File name ] [ String or regular expression ]
 
     < Example >
 
-    $ engine -z notojima.txt wajima
-    Full-text search.
+    $ engine2 -z notojima.txt wajima
+    
+    ※ 全文検索エンジン
 
     HELP
 
