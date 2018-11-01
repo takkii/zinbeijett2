@@ -51,8 +51,16 @@ module All
 end
 end
 
+one = ARGV[0]
+
+if one.nil?
 All.search
+else
+puts 'Not other arguments!'.toutf8
+end
 
 puts ''
 
 GC.start
+
+__END__
