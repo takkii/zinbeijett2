@@ -3,10 +3,54 @@
 
 # vim: filetype=ruby
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 require 'kconv'
-require 'zinbeijett'
 
 Encoding.default_internal = 'UTF-8'
+
+# frozen_string_literal: true
+
+puts ''
+
+require 'kconv'
+
+Encoding.default_internal = 'UTF-8'
+
+module All
+  module_function
+
+  def search
+    one = ARGV[0].toutf8
+
+    open(one) do |f|
+      while (str2 = f.gets)
+        str = str2.chomp!
+        twice = ARGV[1].toutf8
+        three_act = /#{twice}/o
+
+        begin
+          if str.match(three_act) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
+          end
+        rescue Timeout::Error, Exception => e
+          exit!
+        end
+      end
+
+      if f.eof?
+        puts ''
+      elsif !f.eof
+        begin
+        raise All
+      rescue Exception => ee
+        puts ee.backtrace
+        puts ee.backtrace_locations
+      end
+    end
+    end
+end
+end
+
+puts ''
+
+GC.start
