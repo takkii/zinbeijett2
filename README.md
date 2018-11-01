@@ -12,9 +12,4 @@ brew update
 brew install zinbeijett2
 ```
 
-zinbeijett2を優先
-
-```
-# zinbeijett2
-set -x PATH /usr/local/Cellar/zinbeijett2/2.0.0/bin $PATH
-```
+※ ライセンスは有償ですがまだ、具体的に考えていません。
