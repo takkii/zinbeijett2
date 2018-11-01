@@ -27,4 +27,13 @@ brew install zinbeijett2
 電気代や活動資金にします。
 ```
 
+動作確認
+
+```txt
+パッケージ管理
+
+homebrew......OK
+linuxbrew.....OK
+```
+
 Author Takayuki Kamiyama.
