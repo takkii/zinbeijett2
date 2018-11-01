@@ -1,0 +1,180 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'kconv'
+require 'prop/version'
+
+Encoding.default_internal = 'UTF-8'
+
+# zinbeijett
+module Zinbeijett
+  module_function
+
+  def version
+    puts 'Zinbeijett VERSION: '.toutf8 + Engine::VERSION.toutf8
+  end
+
+  def start
+    puts ''
+    puts 'Start'.center(60, '-')
+
+    puts <<-DOC
+    == Contributing to zinbeijett
+
+    GitHub account  : takkii
+    GitLab instance : takkii
+    Twitter account : @takkii
+
+    ** Spectacle **
+
+    Improve zinbeiw find function to work on the command line.
+
+    ** version info **
+
+    search match method use,
+
+    =~ operator  : 0.x.x
+
+    match method : 1.x.x
+
+    > Thank you for reading to the last.
+    DOC
+
+    puts 'Start'.center(60, '-')
+    puts ''
+  end
+
+  def licen
+    puts ''
+    puts 'License'.center(60, '-')
+    puts <<-HOW
+
+    The MIT License
+
+    Copyright (c) 2013-2018 Takayuki Kamiyama
+
+    Permission is hereby granted, free of charge,
+    to any person obtaining a copy of this software and
+    associated documentation files (the [Software]),
+    to deal in the Software without restriction,
+    including without limitation the rights to use, copy, modify,
+    merge, publish, distribute, sublicense,
+    and/or sell copies of the Software,
+    and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions:
+
+    The above copyright notice and
+    this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED [AS IS],
+    WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR
+    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+    DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+    OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    HOW
+
+    puts ''
+    puts 'License'.center(60, '-')
+    puts ''
+  end
+
+  def help
+    puts ''
+    puts 'Command'.center(60, '-')
+
+    puts <<-HELP
+
+    [zinbeijett]
+
+    -s,start           Start page!
+
+    -v,version         Version information!
+
+    -l,license         License information!
+
+    [engine]
+
+    < how to use >
+
+    engine [option] [ File name ] [ String or regular expression ]
+
+    < Example >
+
+    $ engine -z notojima.txt wajima
+    Full-text search.
+
+    $ engine -a notojima.txt wajima
+    AND Search.
+
+    $ engine -n notojima.txt wajima
+    NOT Search.
+
+    $ engine -o notojima.txt wajima notojima
+    OR search. use two words.
+
+    $ engine -g
+    print GC.stat, Garbage collection info output.
+
+    $ engine -d
+    druby process erb templete output.
+
+    $ engine -m notojima.txt
+    mail search. pattern match is mailaddress word only.
+    HELP
+
+    puts 'Command'.center(60, '-')
+    puts ''
+  end
+
+  def soft
+    puts 'Zinbeijett is open source software.'.toutf8
+  end
+end
+
+v = /\Aversion\z/
+ve = /\A[-][v]\z/
+h = /\A[-][l]\z/
+he = /\Alicense\z/
+s = /\Astart\z/
+so = /\A[-][s]\z/
+co = /\A[-][h]\z/
+com = /\Ahelp\z/
+
+one = ARGV[0]
+
+zi = Zinbeijett
+
+if one.nil?
+  zi.soft
+elsif one.match?(v)
+  zi.version
+elsif one.match?(ve)
+  zi.version
+elsif one.match?(he)
+  zi.licen
+elsif one.match?(h)
+  zi.licen
+elsif one.match?(s)
+  zi.start
+elsif one.match?(so)
+  zi.start
+elsif one.match?(co)
+  zi.help
+elsif one.match?(com)
+  zi.help
+else
+  puts 'Please choose an option.'.toutf8
+end
+
+__END__
