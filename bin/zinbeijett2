@@ -61,7 +61,7 @@ module Zinbeijett
 
     < Example >
 
-    $ engine notojima.txt wajima
+    $ engine -z notojima.txt wajima
     Full-text search.
 
     HELP
