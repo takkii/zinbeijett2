@@ -19,12 +19,12 @@ module All
   module_function
 
   def search
-    one = ARGV[0].toutf8
+    one = ARGV[1].toutf8
 
     open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        twice = ARGV[1].toutf8
+        twice = ARGV[2].toutf8
         three_act = /#{twice}/o
 
         begin
@@ -52,8 +52,11 @@ end
 end
 
 one = ARGV[0]
+z = /\A[-][z]\z/
 
 if one.nil?
+puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
+elsif one.match?(z)
 All.search
 else
 puts 'Not other arguments!'.toutf8
