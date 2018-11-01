@@ -51,6 +51,8 @@ module All
 end
 end
 
+All.search
+
 puts ''
 
 GC.start
