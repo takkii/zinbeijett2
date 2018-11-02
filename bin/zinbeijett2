@@ -12,7 +12,7 @@ module Zinbeijett
   module_function
 
   def version
-    puts 'zinbeijett2 and engine2 VERSION is : '+'2.0.0'.toutf8.freeze
+    puts 'zinbeijett2 and engine2 VERSION is : ' + '2.0.0'.toutf8.freeze
   end
 
   def start
@@ -37,7 +37,7 @@ module Zinbeijett
     =~ operator  : 0.x.x
 
     match method : 1.x.x
-    
+
     軽量化       : 2.x.x
 
     > Thank you for reading to the last.
@@ -62,7 +62,7 @@ module Zinbeijett
     < Example >
 
     $ engine2 -z notojima.txt wajima
-    
+
     ※ 全文検索エンジン
 
     HELP

@@ -7,8 +7,6 @@ require 'kconv'
 
 Encoding.default_internal = 'UTF-8'
 
-# frozen_string_literal: true
-
 puts ''
 
 require 'kconv'
@@ -55,11 +53,11 @@ one = ARGV[0]
 z = /\A[-][z]\z/
 
 if one.nil?
-puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
+  puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
 elsif one.match?(z)
-All.search
+  All.search
 else
-puts 'Not other arguments!'.toutf8
+  puts 'Not other arguments!'.toutf8
 end
 
 puts ''
