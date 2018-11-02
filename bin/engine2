@@ -9,10 +9,6 @@ Encoding.default_internal = 'UTF-8'
 
 puts ''
 
-require 'kconv'
-
-Encoding.default_internal = 'UTF-8'
-
 module All
   module_function
 
