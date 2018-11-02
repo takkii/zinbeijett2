@@ -1,4 +1,4 @@
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)[![GitHub release](https://img.shields.io/github/release/takkii/zinbeijett2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbeijett2.svg?style=flat)](GitHub)
+[![GitHub release](https://img.shields.io/github/release/takkii/zinbeijett2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbeijett2.svg?style=flat)](GitHub)
 
 ### zinbeijett2
 
