@@ -27,6 +27,7 @@ module All
             puts ''
           end
         rescue Timeout::Error, Exception => e
+          puts e.backTrace
           exit!
         end
       end
@@ -34,15 +35,15 @@ module All
       if f.eof?
         puts ''
       elsif !f.eof
-        begin
+      begin
         raise All
       rescue Exception => ee
         puts ee.backtrace
         puts ee.backtrace_locations
       end
+      end
     end
-    end
-end
+  end
 end
 
 one = ARGV[0]
