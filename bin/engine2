@@ -26,7 +26,7 @@ module All
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error, Exception => e
+        rescue Timeout::Error, StandardException => e
           puts e.backTrace
           exit!
         end
@@ -37,7 +37,7 @@ module All
       elsif !f.eof
       begin
         raise All
-      rescue Exception => ee
+      rescue StandardException => ee
         puts ee.backtrace
         puts ee.backtrace_locations
       end
