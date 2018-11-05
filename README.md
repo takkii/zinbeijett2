@@ -38,4 +38,14 @@ homebrew......OK
 linuxbrew.....OK
 ```
 
+VScodeでデバッグ
+
+```ruby
+gem install ruby-debug-ide
+
+gem install debase
+
+> Start debugging
+```
+
 Author Takayuki Kamiyama.
