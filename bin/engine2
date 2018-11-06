@@ -8,8 +8,6 @@ require 'timeout'
 
 Encoding.default_internal = 'UTF-8'
 
-puts ''
-
 # all search text
 module Zinbeijett2
   module_function
@@ -193,8 +191,6 @@ if one.nil?
   puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
 elsif one.match?(z)
   jin.all
-  puts ''
-  GC.start
 elsif one.match?(a)
   jin.and
 elsif one.match?(o)
@@ -206,8 +202,6 @@ elsif one.match?(m)
 else
   puts 'Not other arguments!'.toutf8
 end
-
-puts ''
 
 GC.start
 
