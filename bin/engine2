@@ -28,7 +28,6 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error, StandardException => e
-          puts e.backTrace
           exit!
         end
       end
@@ -61,7 +60,6 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error, StandardException => e
-          puts e.backtrace
           exit!
         end
       end
@@ -96,7 +94,6 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error, StandardException => e
-          puts e.backtrace
           exit!
         end
       end
@@ -130,7 +127,6 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error, StandardException => e
-          puts e.backTrace
           exit!
         end
       end
@@ -163,7 +159,6 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error, StandardException => e
-          puts e.backTrace
           exit!
         end
       end
