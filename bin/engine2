@@ -4,6 +4,7 @@
 # vim: filetype=ruby
 
 require 'kconv'
+require 'timeout'
 
 Encoding.default_internal = 'UTF-8'
 
@@ -27,7 +28,20 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error, Exception => e
+        rescue Timeout::Error,Exception => e
+          exit!
+        end
+      end
+      
+        if f.eof?
+          puts ''
+          exit!
+        elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue Exception => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
           exit!
         end
       end
@@ -49,6 +63,19 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error,Exception => e
+          exit!
+        end
+      end
+
+      if f.eof?
+          puts ''
+          exit!
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue Exception => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
           exit!
         end
       end
@@ -74,6 +101,19 @@ module Zinbeijett2
           exit!
         end
       end
+
+      if f.eof?
+          puts ''
+          exit!
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue Exception => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+          exit!
+        end
+      end
     end
   end
 
@@ -95,6 +135,19 @@ module Zinbeijett2
           exit!
         end
       end
+
+      if f.eof?
+          puts ''
+          exit!
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue Exception => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+          exit!
+        end
+      end
     end
   end
 
@@ -112,6 +165,19 @@ module Zinbeijett2
             puts ''
           end
         rescue Timeout::Error,Exception => e
+          exit!
+        end
+      end
+
+      if f.eof?
+        puts ''
+        exit!
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue Exception => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
           exit!
         end
       end
