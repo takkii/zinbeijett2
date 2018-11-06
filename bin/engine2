@@ -189,7 +189,7 @@ o = /\A[-][o]\z/
 n = /\A[-][n]\z/
 m = /\A[-][m]\z/
 
-jin = Zinbeijett2.new
+jin = Zinbeijett2
 
 if one.nil?
   puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
