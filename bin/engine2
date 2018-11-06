@@ -37,9 +37,10 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescueException => ee
+        rescue Exception => ee
           puts ee.backtrace
           puts ee.backtrace_locations
+          exit!
         end
       end
     end
@@ -69,7 +70,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescueException => ee
+        rescue Exception => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -103,7 +104,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescueException => ee
+        rescue Exception => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -136,7 +137,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescueException => ee
+        rescue Exception => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -168,9 +169,10 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescueException => ee
+        rescue Exception => ee
           puts ee.backtrace
           puts ee.backtrace_locations
+          exit!
         end
       end
     end
