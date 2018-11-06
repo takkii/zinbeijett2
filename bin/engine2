@@ -10,10 +10,10 @@ Encoding.default_internal = 'UTF-8'
 puts ''
 
 # all search text
-module All
+module Zinbeijett2
   module_function
 
-  def search
+  def all
     one = ARGV[1].toutf8
 
     File.open(one) do |f|
@@ -34,14 +34,149 @@ module All
       end
 
       if f.eof?
+          puts ''
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue StandardException => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+        end
+      end
+    end
+  end
+
+  def and
+    one = ARGV[1].toutf8
+
+    File.open(one) do |f|
+      while (str2 = f.gets)
+        str = str2.chomp!
+        twice = ARGV[2].toutf8
+        three_act2 = /^(?=.*#{twice})/o
+
+        begin
+          if str.match(three_act2) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
+          end
+        rescue Timeout::Error, StandardException => e
+          puts e.backtrace
+          exit!
+        end
+      end
+
+      if f.eof?
+          puts ''
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue StandardException => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+          exit!
+        end
+      end
+    end
+  end
+
+  def or
+    one = ARGV[1].toutf8
+
+    File.open(one) do |f|
+      while (str2 = f.gets)
+        str = str2.chomp!
+        twice = ARGV[2].toutf8
+        drive = ARGV[3].toutf8
+        three_act4 = /(#{twice}|#{drive})/o
+
+        begin
+          if str.match(three_act4) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
+          end
+        rescue Timeout::Error, StandardException => e
+          puts e.backtrace
+          exit!
+        end
+      end
+
+      if f.eof?
+          puts ''
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue StandardException => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+          exit!
+        end
+      end
+    end
+  end
+
+  def not
+    one = ARGV[1].toutf8
+
+    File.open(one) do |f|
+      while (str2 = f.gets)
+        str = str2.chomp!
+        twice = ARGV[2].toutf8
+        three_act3 = /^(?!.*#{twice})/o
+
+        begin
+          if str.match(three_act3) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
+          end
+        rescue Timeout::Error, StandardException => e
+          puts e.backTrace
+          exit!
+        end
+      end
+
+      if f.eof?
+          puts ''
+      elsif !f.eof
+        begin
+          raise Zinbeijett2
+        rescue StandardException => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+          exit!
+        end
+      end
+    end
+  end
+
+  def mail
+    one = ARGV[1].toutf8
+
+    open(one) do |f|
+      while (str2 = f.gets)
+        str = str2.chomp!
+        three_act = /^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o
+
+        begin
+          if str.match(three_act) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
+          end
+        rescue Timeout::Error, StandardException => e
+          puts e.backTrace
+          exit!
+        end
+      end
+
+      if f.eof?
         puts ''
       elsif !f.eof
-      begin
-        raise All
-      rescue StandardException => ee
-        puts ee.backtrace
-        puts ee.backtrace_locations
-      end
+        begin
+          raise Zinbeijett2
+        rescue StandardException => ee
+          puts ee.backtrace
+          puts ee.backtrace_locations
+        end
       end
     end
   end
@@ -49,11 +184,25 @@ end
 
 one = ARGV[0]
 z = /\A[-][z]\z/
+a = /\A[-][a]\z/
+o = /\A[-][o]\z/
+n = /\A[-][n]\z/
+m = /\A[-][m]\z/
+
+jin = Zinbeijett2.new
 
 if one.nil?
   puts 'engine2 is Zinbeijett2, I made in 2018.'.toutf8
 elsif one.match?(z)
-  All.search
+  jin.all
+elsif one.match?(a)
+  jin.and
+elsif one.match?(o)
+  jin.or
+elsif one.match?(n)
+  jin.not
+elsif one.match?(m)
+  jin.mail
 else
   puts 'Not other arguments!'.toutf8
 end

@@ -34,11 +34,11 @@ module Zinbeijett
 
     search match method use,
 
-    =~ operator  : 0.x.x
+    operator      : 0.x.x
 
-    match method : 1.x.x
+    match method  : 1.x.x
 
-    軽量化       : 2.x.x
+    minimum size  : 2.x.x
 
     > Thank you for reading to the last.
     DOC
@@ -64,6 +64,22 @@ module Zinbeijett
     $ engine2 -z notojima.txt wajima
 
     ※ 全文検索エンジン
+
+    engine -a notojima.txt wajima
+
+    ※ AND検索エンジン
+
+    engine -n notojima.txt wajima
+
+    ※ NOT検索エンジン
+
+    engine -o notojima.txt wajima notojima
+
+    ※ OR検索エンジン  条件式で2つの単語を使います。
+
+    engine -m notojima.txt
+
+    ※ mail検索エンジン　マッチパターンはメールアドレスのみです。
 
     HELP
 
