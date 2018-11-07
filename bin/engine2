@@ -30,7 +30,7 @@ module Zinbeijett2
           exit!
         end
       end
-      
+
         if f.eof?
           puts ''
         elsif !f.eof
