@@ -26,7 +26,8 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error,Exception => e
+        rescue Timeout::Error,StandardException => e
+          e.backtrace
           exit!
         end
       end
@@ -36,7 +37,7 @@ module Zinbeijett2
         elsif !f.eof
         begin
           raise Zinbeijett2
-        rescue Exception => ee
+        rescue StandardException => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -59,7 +60,8 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error,Exception => e
+        rescue Timeout::Error,StandardException => e
+          e.backtrace
           exit!
         end
       end
@@ -69,7 +71,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescue Exception => ee
+        rescue StandardException => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -93,7 +95,8 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error,Exception => e
+        rescue Timeout::Error,StandardException => e
+          e.backtrace
           exit!
         end
       end
@@ -103,7 +106,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescue Exception => ee
+        rescue StandardException => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
@@ -126,7 +129,8 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error,Exception => e
+        rescue Timeout::Error,StandardException => e
+          e.backtrace
           exit!
         end
       end
@@ -158,7 +162,8 @@ module Zinbeijett2
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
-        rescue Timeout::Error,Exception => e
+        rescue Timeout::Error,StandardException => e
+          e.backtrace
           exit!
         end
       end
@@ -168,7 +173,7 @@ module Zinbeijett2
       elsif !f.eof
         begin
           raise Zinbeijett2
-        rescue Exception => ee
+        rescue StandardException => ee
           puts ee.backtrace
           puts ee.backtrace_locations
           exit!
