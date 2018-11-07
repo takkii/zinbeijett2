@@ -5,7 +5,6 @@
 
 require 'kconv'
 require 'timeout'
-require 'optparse'
 
 Encoding.default_internal = 'UTF-8'
 
