@@ -32,9 +32,9 @@ module Zinbeijett2
         end
       end
 
-        if f.eof?
-          puts ''
-        elsif !f.eof
+      if f.eof?
+        puts ''
+      elsif !f.eof
         begin
           raise Zinbeijett2
         rescue StandardException => ee
