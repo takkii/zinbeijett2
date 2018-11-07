@@ -5,8 +5,11 @@
 
 require 'kconv'
 require 'timeout'
+require 'optparse'
 
 Encoding.default_internal = 'UTF-8'
+
+puts ''
 
 # all search text
 module Zinbeijett2
@@ -194,6 +197,7 @@ jin = Zinbeijett2
 
 if one.nil?
   puts 'engine2 is Zinbeijett2, CN:takkii made in 2018.'.toutf8
+  puts ''
 elsif one.match?(z)
   jin.all
 elsif one.match?(a)
@@ -204,8 +208,6 @@ elsif one.match?(n)
   jin.not
 elsif one.match?(m)
   jin.mail
-else
-  puts 'Not other arguments!'.toutf8
 end
 
 GC.start
