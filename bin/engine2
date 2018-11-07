@@ -194,7 +194,7 @@ m = /\A[-][m]\z/
 jin = Zinbeijett2
 
 if one.nil?
-  puts 'engine2 is Zinbeijett2, CN:takkii made in 2018.'.toutf8
+  puts 'Takayuki Kamiyama create [軽量化] project to 2018.'.toutf8
 elsif one.match?(z)
   jin.all
 elsif one.match?(a)
