@@ -15,6 +15,10 @@
 ```txt
 brew tap takkii/homebrew-zinbeijett2
 
+or
+
+brew tap takkii/homebrew-personal (zinbei2,zinbeijett2)
+
 brew update
 
 brew install zinbeijett2
