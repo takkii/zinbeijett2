@@ -64,15 +64,15 @@ module Zinbeijett
 
     $ engine2 -z notojima.txt wajima
 
-    ※ 全文検索エンジン
+    ※ 全文検索エンジン  全文検索を行います。
 
     engine -a notojima.txt wajima
 
-    ※ AND検索エンジン
+    ※ AND検索エンジン  全文より少し高速です。
 
     engine -n notojima.txt wajima
 
-    ※ NOT検索エンジン
+    ※ NOT検索エンジン  例の実行はwajima以外を出力します。
 
     engine -o notojima.txt wajima notojima
 
