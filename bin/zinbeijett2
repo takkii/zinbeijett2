@@ -7,7 +7,7 @@ require 'kconv'
 
 Encoding.default_internal = 'UTF-8'
 
-# zinbeijett
+# zinbeijett how to use.
 module Zinbeijett
   module_function
 
