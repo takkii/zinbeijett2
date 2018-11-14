@@ -12,7 +12,7 @@ module Zinbeijett
   module_function
 
   def version
-    # puts 'この箇所は修正しない' + '本体を修正後、バージョンをあげる'
+    # puts 'no change message' + 'version up'
     puts 'zinbeijett2 and engine2 VERSION is : ' + '2.1.2'.toutf8.freeze
   end
 
