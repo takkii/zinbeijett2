@@ -13,7 +13,7 @@ module Zinbeijett
 
   def version
     # puts 'no change message' + 'version up'
-    puts 'zinbeijett2 and engine2 VERSION is : ' + '2.1.2'.toutf8.freeze
+    puts 'zinbeijett2 and engine2 VERSION is : ' + '2.1.3'.toutf8.freeze
   end
 
   def start
