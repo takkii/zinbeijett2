@@ -122,4 +122,6 @@ else
   puts 'Please choose an option.'.toutf8
 end
 
+GC.stress = true
+
 __END__
