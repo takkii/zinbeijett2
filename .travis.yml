@@ -1,5 +1,5 @@
 language: ruby
-rbenv:
+rvm:
   - 2.6.2
 script: bundle exec rspec
 gemfile:
