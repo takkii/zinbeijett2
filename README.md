@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/takkii/zinbeijett2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbeijett2.svg?style=flat)](GitHub)
+[![GitHub release](https://img.shields.io/github/release/takkii/zinbeijett2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbeijett2.svg?style=flat)](GitHub)[![Build Status](https://travis-ci.org/takkii/zinbeijett2.svg?branch=master)](https://travis-ci.org/takkii/zinbeijett2)
 
 ### zinbeijett2
 
