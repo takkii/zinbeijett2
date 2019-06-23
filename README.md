@@ -13,11 +13,7 @@
 使い方
 
 ```txt
-brew tap takkii/homebrew-zinbeijett2
-
-or
-
-brew tap takkii/homebrew-personal (zinbei2,zinbeijett2)
+brew tap takkii/homebrew-personal
 
 brew update
 
