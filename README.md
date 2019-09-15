@@ -24,8 +24,10 @@ brew install zinbeijett2
 
 ```txt
 ライセンスは、有償です。
-GitHubページリンクより投げ銭、500円のワンコイン。
-活動資金などにしていきます。
+GitHub sponsor Paypal.me
+
+投げ銭500円のワンコイン。
+用途は活動資金にしていきます。
 ```
 
 動作確認
