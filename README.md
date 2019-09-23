@@ -49,6 +49,8 @@ gem install debase
 > Start debugging
 ```
 
+zinbeijettプロジェクト内、検索結果。
+
 ![百人一首](https://github.com/takkii/zinbeijett2/blob/master/img/hyaku.png)
 
 Author Takayuki Kamiyama.
