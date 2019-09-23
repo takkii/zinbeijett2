@@ -49,4 +49,6 @@ gem install debase
 > Start debugging
 ```
 
+![百人一首](https://github.com/takkii/zinbeijett2/blob/master/img/hyaku.png
+
 Author Takayuki Kamiyama.
